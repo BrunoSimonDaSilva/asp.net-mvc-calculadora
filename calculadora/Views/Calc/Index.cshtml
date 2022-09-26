@@ -1,0 +1,21 @@
+﻿@model CalcModel
+
+<form asp-controller="Calc" asp-action="Calcular" method="post">
+    <h2>calculos aritmeticos</h2>
+    <input asp-for="fist" type="number" placeholder="primer numero" value="">
+    <span asp-validation-for="fist" class="text-danger"></span>
+    <input asp-for="second" type="number" placeholder="segundo numero" value="">
+    <span asp-validation-for="second" class="text-danger"></span>
+    <h2>Resultado: @Html.DisplayFor(x => x.result)</h2>
+    <label>operation</label>
+    <select asp-for="operation" class="opr">
+        <option value="Soma">Soma</option>
+        <option value="Subtrair">Subtrair</option>
+        <option value="multiplicar">multiplicar</option>
+        <option value="dividir">dividir</option>
+        <input type="submit" name="enviar" value="calcular" id="boton">
+    </select>
+    
+
+
+</form>
